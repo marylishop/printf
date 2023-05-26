@@ -10,6 +10,6 @@ The lists of the files contained in the repository, including the main files, au
 
 The tasks required for the project are outlined, specifying the conversion specifiers and functionalities that need to be handled. These include handling different data types, flags, precision, width, and length modifiers. Custom conversion specifiers like printing reversed strings and ROT13 translation are also mentioned. by crediting the
 
- Authors,
- Maryam Ben Aissa and Fatima Zohra Lakhal, 
+Authors,
+Maryam Ben Aissa and Fatima Zohra Lakhal, 
 
