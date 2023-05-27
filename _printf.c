@@ -16,34 +16,31 @@ int _printf(const char *format, ...)
 	{"%o", printf_oct}, {"%r", printf_srev},
 	{"%R", printf_rot13}, {"%S", printf_exclusive_string},
 };
+
 	va_list args;
 	int i = 0, j, len = 0;
 
 	va_start(args, format);
-	for (i = 0; format[i] != '\0'; i++)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+
+Here:
+	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
-	{
-		for (j = 0; m[j].id != NULL; j++)
-	{
-		if (format[i + 1] == m[j].id[1])
-	{
-		len += m[j].f(args);
-		i++;
-		break;
-	}
-	}
-		if (m[j].id == NULL)
+		j = 13;
+		while (j >= 0)
 		{
-		write(1, &format[i], 1);
-		len++;
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+			{
+				len += m[j].f(args);
+				i = i + 2;
+				goto Here;
+			}
+			j--;
 		}
-	}
-	else
-	{
-		write(1, &format[i], 1);
+		_putchar(format[i]);
 		len++;
-	}
+		i++;
 	}
 	va_end(args);
 	return (len);
