@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 #ifndef MAIN_H
 
 #define MAIN_H
@@ -95,3 +98,4 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 #endif /* MAIN_H */
+>>>>>>> cd81f6a8fefe7d21b6b6f3f3000e8de5c7b91169
