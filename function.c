@@ -10,9 +10,7 @@
  * @size: Size specifier
  * Return: Number of chars printed
  */
-
 int print_char(va_list types, char buffer[],
-
 int flags, int width, int precision, int size)
 {
 char c = va_arg(types, int);
@@ -30,10 +28,8 @@ return (handle_write_char(c, buffer, flags, width, precision, size));
  * Return: Number of chars printed
  */
 int print_string(va_list types, char buffer[],
-
 int flags, int width, int precision, int size)
 {
-
 int length = 0, i;
 char *str = va_arg(types, char *);
 UNUSED(width);
@@ -178,13 +174,12 @@ int print_binary(va_list types, char buffer[],
 {
 	m /= 2;
 	a[i] = (n / m) % 2;
-	}
-	for (i = 0, sum = 0, count = 0; i < 32; i++)
-	{
-	sum += a[i];
+}
+for (i = 0, sum = 0, count = 0; i < 32; i++)
+{
+sum += a[i];
 if (sum || i == 31)
-
-		{
+{
 char z = '0' + a[i];
 
 write(1, &z, 1);
