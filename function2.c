@@ -3,14 +3,14 @@
 
 /****************** PRINT POINTER ******************/
 /**
- *print_pointer - A variable to print
- *@types: List of argmt
- *@buffer: Buffer array to handle
- *@flags:  Calculates active flags
- *@width: get width
- *@precision: Precision specification
- *@size: Size specifier
- *Return: Number of chars printed.
+ * print_pointer - A variable to print
+ * @types: List of argmt
+ * @buffer: Buffer array to handle
+ * @flags:  Calculates active flags
+ * @width: get width
+ * @precision: Precision specification
+ * @size: Size specifier
+ * Return: Number of chars printed.
  */
 
 int print_pointer(va_list types, char buffer[],
