@@ -8,8 +8,9 @@
  * Return: width value.
  */
 
- int get_width(const char *format, int *i, va_list list)
- {
+int get_width(const char *format, int *i, va_list list)
+
+{
 int curr_i = *i + 1;
 int width = 0;
 
@@ -33,5 +34,5 @@ break;
 }
 
 *i = curr_i - 1;
-return width;
- }
+return (width);
+}
